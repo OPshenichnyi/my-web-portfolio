@@ -1,0 +1,97 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+
+.footer__block{
+    margin: auto;
+    text-align: center;
+    background: var.$bg_grey_primary;
+    color: var.$text-primary-black;
+
+    @include mix.flex-center($is-column: true);
+    
+    @include mix.mq(){
+        max-width: var.$min-w;
+        padding: 24px 32px 24px 32px;
+    }
+    
+    @include mix.mq($bp: lg){
+        max-width: var.$mid-w;
+    }
+    
+    @include mix.mq($bp: xxl){
+        max-width: var.$max-w;
+        padding: 24px 70px 24px 70px;
+    }
+}
+
+.navigation_block_footer{
+    margin-bottom: 56px;
+    @include mix.mq($bp: lg){
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 36px;
+    }    
+}
+
+.navigation_footer--list{
+    margin-bottom: 56px;
+    .navigation_footer--item:not(:last-child){
+        margin-bottom: 8px;
+    }
+      @include mix.mq($bp: lg){
+        text-align: left;
+        margin: 0;
+    }
+}
+
+.navigation_footer--item{
+    @include mix.font-styles($fs:32px, $fw: 300, $lh:39px,);
+    text-transform: uppercase;
+    
+    @include mix.mq($bp: lg){
+        @include mix.font-styles($fs: 24px, $fw: 300, $lh: 39px, $ls: 0);
+    }
+    
+    @include mix.mq($bp: xxl){
+        @include mix.font-styles($fs: 32px, $fw: 300, $lh: 39px);
+    }
+}
+
+.footer_link--phone{
+    @include mix.flex-center();
+    stroke: var.$text-primary-black;
+    @include mix.font-styles($fs: 24px, $fw: 400, $lh: 29px,);
+    .footer_link--svg{
+        margin-right: 12px;
+    }
+    margin-bottom: 16px;
+    @include mix.mq($bp: lg){
+        @include mix.font-styles($fs: 20px);
+    }
+    @include mix.mq($bp: lg){
+        @include mix.font-styles($fs: 24px);
+    }    
+}
+
+.social_link_list--footer{
+    stroke: var.$text-primary-black;;
+    @include mix.flex-center();
+    @include mix.mq($bp: lg){
+        margin: 0;
+        justify-content: right;
+    }
+    .social_item_link--footer:not(:last-child){
+        margin-right: 16px;
+    }
+}
+
+.footer_small--text{
+    @include mix.font-styles($fs: 18px, $fw: 400, $lh: 22px,);
+    @include mix.mq($bp: lg){
+        @include mix.font-styles($fs: 20px, $fw: 400, $lh: 22px, $ls: 0);
+    }
+    @include mix.mq($bp: xxl){
+        @include mix.font-styles($fs: 24px, $fw: 400, $lh: 22px, $ls: 0);
+    }
+}

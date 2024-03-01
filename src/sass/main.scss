@@ -1,2 +1,14 @@
 @use "./base/reset";
-@use "./test";
+@use "./base/fonts";
+@use "./abstracts/variables";
+@use "./layout/layout";   
+@use "./layout/section";
+@use "./themes/theme";  
+@use "./layout/header";
+@use "./components/hero";
+@use "./abstracts/utils";
+@use "./layout/menu-nav";
+@use "./layout/footer";
+@use "./layout/about";
+
+   

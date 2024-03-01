@@ -1,0 +1,55 @@
+@use "../abstracts/variables" as var;
+// Font linking
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+// List of font sizes
+$font-size:(
+  "0": 0,
+  xxxxs: var.$fs-xxxxs,
+  xxxs: var.$fs-xxxs,
+  xxs: var.$fs-xxs,
+  xs: var.$fs-xs,
+  s: var.$fs-s,
+  m: var.$fs-m,
+  l: var.$fs-l,
+  xl: var.$fs-xl,
+  xxl: var.$fs-xxl,
+  xxxl: var.$fs-xxxl,
+  xxxxl: var.$fs-xxxxl,
+);
+
+@each $size, $factor in $font-size{
+.fs-#{$size} {
+    font-size: $factor;
+  }
+}
+
+// List of font weights
+$weight: var.$fw;
+
+@each $w in $weight{
+  .fw-#{$w} {
+    font-weight: #{$w};
+  }
+}

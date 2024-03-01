@@ -1,0 +1,73 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.menu__block{
+    background: var.$bg_black_secondary;
+    padding-top: 28px;
+    padding-left: 32px;
+    @include mix.mq($bp: xxl){
+        padding-top: 44px;
+        padding-left: 70px;
+    }
+}
+
+.menu_container--img{
+   @include mix.flex-center();
+   width: 100px;
+   height: 100px; 
+   border-radius: 50%;
+   background: var.$bg_circle_img;
+   background-image: url('/src/img/img/My-foto-small.png');
+   background-size: cover;
+   background-position: center;
+   margin-bottom: 28px;
+   @include mix.mq($bp: xxl){
+       width: 200px;
+       height: 200px; 
+       margin-bottom: 48px;
+   }
+}
+
+.menu_navigation--list{
+    margin-bottom: 88px;
+    .navigation--item:not(:last-child){
+        margin-bottom: 24px;
+    }   
+}
+
+.navigation--item{
+    @include mix.font-styles($fs:16px, $fw: 300, $lh:39px,);
+    text-transform: uppercase;
+    @include mix.mq($bp: xxl){
+        @include mix.font-styles($fs: 32px, $fw: 300, $lh: 39px, $ls: 0);
+    }
+}
+
+.social_link_list{
+    margin-bottom: 60px;
+    .social_item:not(:last-child){
+        margin-bottom: 16px;
+    } 
+}
+
+.social_item--link{
+    stroke: var.$text-primary-white;
+}
+
+.menu_block--name{
+    @include mix.font-styles($fs:14px, $fw: 400, $lh:17px,);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    @include mix.mq($bp: xxl){
+        @include mix.font-styles($fs: 28px, $fw: 400, $lh: 34px);
+    }
+}
+
+.menu_block--profession{
+    @include mix.font-styles($fs:8px, $fw: 400, $lh:17px,);
+    text-transform: uppercase;
+    color: var.$color-accent;
+    @include mix.mq($bp: xxl){
+        @include mix.font-styles($fs: 14px, $fw: 400, $lh: 17px, $ls: 0);
+    }
+}

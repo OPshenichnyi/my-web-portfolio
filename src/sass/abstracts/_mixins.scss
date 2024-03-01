@@ -1,0 +1,106 @@
+@use "sass:map";
+@use "./variables.scss" as var;
+// Mixin for managing flex container properties
+// Used in the _flex.scss file
+
+// Оголошення міксина з опціональним параметром:
+// $is-column - логічна змінна, яка визначає, чи повинні елементи вирівнюватися як колонка.
+
+@mixin flex-center($is-column: false) {
+  display: flex; // Встановлює display: flex для контейнера.
+  justify-content: center; // Центрує елементи по головній осі (за замовчуванням, по горизонталі).
+  align-items: center; // Центрує елементи по поперечній осі (за замовчуванням, по вертикалі).
+
+  // Якщо $is-column дорівнює true, змінює ось вирівнювання на колонку.
+  @if $is-column {
+    flex-direction: column; // Змінює напрямок flex-елементів на колонку.
+  }
+}
+
+
+// Mixin for media screen 
+$breakpoints: (
+    "sm" : var.$sm,
+    "lg" : var.$lg,
+    "xxl" : var.$xxl,
+) !default;
+
+// Оголошення міксина з параметрами за замовчуванням:
+// $bp - точка перелому (наприклад, 'sm', 'md', 'lg' тощо).
+// $type - тип медіа-запиту ('min' для min-width або 'max' для max-width).
+// $is-retina - чи потрібно застосовувати стилі тільки для ретина дисплеїв.
+@mixin mq($bp: sm, $type: min, $is-retina: false) {
+  // Перевіряє, чи існує ключ (точка перелому) в мапі $breakpoints.
+  @if map.has-key($breakpoints, $bp) {
+    // Отримує значення ширини для даної точки перелому.
+    $width: map-get($breakpoints, $bp);
+
+    // Якщо тип медіа-запиту 'max', зменшує ширину на незначну величину, 
+    // щоб запобігти колізіям на точці перелому.
+    @if $type == max {
+      $width: $width - 0.02px;
+    }
+
+    // Створює медіа-запит використовуючи динамічно створений рядок з вказаною шириною.
+    @media only screen and (#{$type}-width: $width) {
+      // Якщо потрібно застосувати стилі тільки для ретина дисплеїв.
+      @if $is-retina {
+        // Створює вкладений медіа-запит для ретина дисплеїв з високою щільністю пікселів.
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+          @content; // Вміст, який буде вставлено, якщо умови задовольняються.
+        }
+      } @else {
+        @content; // Вміст для не-ретина дисплеїв.
+      }
+    }
+  }
+}
+
+// Mixin fonts style  
+@mixin font-styles($fs: 24px, $fw: 400, $lh: null, $ls: 0) {
+  // Перевірка, чи font-size вказано в пікселях.
+  @if unit($fs) != 'px' {
+    @error "font-size має бути вказано в пікселях. Ви вказали: #{$font-size}.";
+  }
+  // Опціональна перевірка для line-height, якщо вона вказана.
+  @if $lh != null and unit($lh) != 'px' {
+    @error "line-height має бути вказано в пікселях або без одиниць вимірювання. Ви вказали: #{$line-height}.";
+  }
+  // Опціональна перевірка для font-weight, якщо вона вказана не числом.
+   @if type-of($fw) != 'number' or unit($fw) != '' {
+    @error "font-weight must be a unitless number.";
+  }
+
+  font-family: 'Inter', sans-serif;
+  font-size: $fs;
+  font-weight: $fw;
+  letter-spacing: $ls;
+
+  // Обчислення та застосування line-height, якщо воно не вказано.
+  @if $lh == null {
+    line-height: normal;
+  } @else {
+    $rounded-line-height: calc(round($lh / $fs * 100) / 100);
+    line-height: $rounded-line-height;
+  }
+}
+
+@mixin p-absolute($t: null, $r: null, $b: null, $l: null) {
+  position: absolute;
+  @if $b {
+    bottom: $b;
+  }
+  @if $l {
+    left: $l;
+  }
+  @if $r {
+    right: $r;
+  }
+  @if $t {
+    top: $t;
+  }
+  @else{
+    top: 0;
+    left: 0;
+  }
+}

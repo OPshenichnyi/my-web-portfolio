@@ -1,0 +1,37 @@
+// Property justify-content
+$values: start, end, center, stretch, between, around, evenly;
+
+@each $value in $values {
+  .justify-#{$value} {
+    @if ($value == start) or ($value == end) {
+      justify-content: flex-#{$value};
+    } @else if ($value == between) or ($value == around) or ($value == evenly) {
+      justify-content: space-#{$value};
+    } @else {
+      justify-content: $value;
+    }
+  }
+}
+/* justify-start justify-end justify-center justify-stretch justify-between 
+ justify-around justify-evenly 
+*/
+
+// Property align-items
+$values: start, end, center, stretch;
+@each $value in $values {
+  .items-#{$value} {
+    @if ($value == start) or ($value == end) {
+      align-items: flex-#{$value};
+    } @else {
+      align-items: $value;
+    }
+  }
+}
+
+/* items-start items-end items-center items-stretch */
+
+// Other 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+// .flex-wrap 

@@ -1,0 +1,38 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+
+.header__burger-menu-icon{
+    stroke: vars.$bg_grey_primary;
+}
+
+.header__phone-icon{
+    margin-right: 5px;
+}
+
+.header__contact-link{
+    @include mix.flex-center();
+    text-decoration: none;
+    stroke: vars.$bg_grey_primary;
+    @include mix.font-styles($fs: 18px, $fw:300, $lh: 18px);
+    text-align: left;
+    text-transform: uppercase;
+    
+}
+
+.header{
+    @include mix.mq(){
+        display: flex;
+        justify-content: space-between;
+        justify-items: baseline;
+        padding: 31px 28px 0 28px;
+    }
+    
+    @include mix.mq($bp:lg){
+        justify-content: end;
+        .header__burger-menu{
+        display: none;
+    }
+    
+    }
+   
+}

@@ -15,3 +15,7 @@
 Проект має плагін для створення спрайту картинок що будуть зібрані в одному файлі в папці public - icon-sprite.svg 
 Посилання на документацію плагіна https://kld.dev/svg-icon-system-vite-edition/
 
+# SVGO for  optimizing SVG files
+В темплейті встановленно SVGO для оптимізації файлів SVG 
+Щоб запустити оптимізацію виконайте команду / npx svgo -f src/icons --recursive / 
+

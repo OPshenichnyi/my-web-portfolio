@@ -1,0 +1,25 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+
+.hero__section{
+    padding-top: 24px;
+    @include mix.flex-center();
+    @include mix.mq($bp:lg){
+        display: none;
+    };
+}
+
+.hero_svg--dev{
+    @include mix.p-absolute($t:-10px, $l: -13px);
+}
+
+.hero_svg-circle{
+    width: 174px;
+    height: 174px;
+    border-radius: 50%;
+    filter: blur(70px);
+    background: var.$bg_svg_icon;
+    z-index: -1;
+    @include mix.p-absolute($t:0, $r: -87px);
+}
+

@@ -1,0 +1,43 @@
+// Властивість display
+$values: none, inline, block, inline-block, flex, inline-flex, grid,
+  inline-grid;
+@each $value in $values {
+  .d-#{$value} {
+    display: $value;
+  }
+}
+
+// Властивість position
+$values: relative, absolute, fixed, sticky;
+@each $value in $values {
+  .p-#{$value} {
+    position: $value;
+  }
+}
+
+// Контент для screen-readers
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+// Переповнення текстових блоків
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+// Центрування для тексту
+.text-center {
+  text-align: center;
+}
+
+

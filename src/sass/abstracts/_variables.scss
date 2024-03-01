@@ -1,0 +1,46 @@
+// Min and max width of the window
+$min-w: 375px;
+$mid-w: 750px;
+$max-w: 1440px;
+
+// Brake points
+$sm: 375px;
+$lg: 750px;
+$xxl: 1400px;
+
+// Fonts Size in project
+$fs-base: 24px;
+
+$fs-xxxxs: 8px;
+$fs-xxxs: 12px;
+$fs-xxs: 14px;
+$fs-xs: 16px;
+$fs-s: 18px;
+$fs-m: $fs-base;
+$fs-l: 28px;
+$fs-xl: 32px;
+$fs-xxl: 36px;
+$fs-xxxl: 44px;
+$fs-xxxxl: 60px;
+
+// Font weights
+$fw: 300, 400, 500, 600;
+
+// Color scheme
+// Base
+$bg_primary: #030303;
+$bg_grey_primary: #E3E3E3;
+$bg_accent: #F04C0C;
+$bg_grey_secondary: #E1E1E1;
+$bg_black_secondary: #181818;
+
+// Additional
+$text-primary-white: #FFFFFF;
+$text-primary-black: #000000;
+$color-accent: #F04C0C;
+$border_color_grey: #FFFFFF80;
+$liner_gradient_grey: (89.43deg, rgb(252, 252, 252) 0.087%,rgb(167, 167, 167) 99.888%);
+$color_svg_dev: #87838280;
+$bg_svg_icon: #E5E5E5;
+$bg_circle_img: #D9D9D9;
+
