@@ -7,32 +7,112 @@
     @include mix.flex-center();
     @include mix.mq($bp: lg){
         max-width: var.$mid-w;
+        padding-top: 65px;
     };
     @include mix.mq($bp: xxl){
         max-width: var.$max-w;
+        padding-top: 132px;
+    };
+}
+
+.about_title--wrap{
+    justify-content: center;
+    border-radius: 18px;
+    padding: 10px;
+    background-color: var.$bg_accent;
+    @include mix.p-absolute($t: 0, $l: 50%);
+    transform: translate(-50%, -50%);
+    @include mix.mq($bp: lg){
+        border-radius: 26px;
+        padding: 10px 16px;
+    };
+    @include mix.mq($bp: xxl){
+        border-radius: 36px;
+        padding: 13px 20px;
     };
 }
 
 .about__title{
-    width: 242px;
+    white-space: nowrap;
     @include mix.font-styles($fs:16px, $fw: 600, $lh: 19px, $ls:0px);
     text-transform: uppercase;
-    background-color: var.$bg_accent;
-    @include mix.p-absolute($t: 0, $l: 50%);
-    transform: translate(-50%, -50%);
-    display: inline-flex;
-    border-radius: 18px;
-    padding: 10px;
+    @include mix.mq($bp: lg){
+        @include mix.font-styles($fs: 24px, $lh: 29px);
+    };
+    @include mix.mq($bp: xxl){
+        @include mix.font-styles($fs: 32px, $lh: 39px);
+    };
 }
 
-.aout_description--wrap{
+.about_description--wrap{
     // @include mix.flex-center();
     padding: 24px 16px 24px 16px;
     background-color: var.$bg_black_secondary;
     border-radius: 20px;
     border: 0.49px solid var.$border_color_grey;
+    max-width: 320px;
+    @include mix.mq($bp: lg){
+        max-width: 430px;
+        padding: 44px 36px 64px 36px;
+    };
+    @include mix.mq($bp: xxl){
+        max-width: 862px;
+        padding: 65px 55px 104px 55px;
+    };
 }
 
 .description--text{
     @include mix.font-styles($fs:12px, $fw: 400, $lh: 15px);
+    @include mix.mq($bp:lg){
+        @include mix.font-styles($fs:16px, $lh: 22px);
+    }
+    @include mix.mq($bp:xxl){
+        @include mix.font-styles($fs:24px, $lh: 29px);
+    }    
+}
+
+.about_shadow{
+    width: 275px;
+    height: 250px;
+    background: var.$bg_black_secondary;
+    border-radius: 20px;
+    border: 0.49px solid var.$border_color_grey;
+    @include mix.p-absolute($b: -10px , $l: 50%);
+    transform: translate(-50%, 0%);
+    z-index: -1;
+
+}
+
+.about_skill_shadow{
+    width: 200px;
+    height: 90px;
+    border-radius: 10px;
+    background-color: red;
+    margin: auto;
+    background: linear-gradient(90deg, #E7E5E5 0.04%, #878787 99.94%);
+}
+
+.about_soft_skill--wrap{
+    display: block;
+    width: 220px;
+    padding: 8px 28px ;
+    border-radius: 10px;
+    text-align: center;
+    color: var.$text-primary-black;
+    background: linear-gradient(var.$liner_gradient_grey);
+
+    .about_soft_skill--title{
+        @include mix.font-styles($fs: 14px, $fw: 600, $lh: 17px);
+        color: var.$color-accent;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+    }
+
+    .soft_skill_item{
+        @include mix.font-styles($fs: 8px, $fw: 400, $lh: 10px);
+        text-transform: uppercase;
+        &:not(:last-child){
+            margin-bottom: 2px;
+        }
+    }
 }

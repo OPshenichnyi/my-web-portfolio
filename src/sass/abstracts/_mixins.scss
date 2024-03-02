@@ -99,8 +99,5 @@ $breakpoints: (
   @if $t {
     top: $t;
   }
-  @else{
-    top: 0;
-    left: 0;
-  }
+
 }
