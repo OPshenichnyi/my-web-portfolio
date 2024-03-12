@@ -1,10 +1,13 @@
 @use "../abstracts/mixins" as mix;
 @use "../abstracts/variables" as var;
 
+.footer__bg{
+    background: var.$bg_grey_primary;
+}
 .footer__block{
     margin: auto;
     text-align: center;
-    background: var.$bg_grey_primary;
+    
     color: var.$text-primary-black;
 
     @include mix.flex-center($is-column: true);

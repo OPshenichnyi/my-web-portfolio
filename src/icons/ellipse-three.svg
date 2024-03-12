@@ -1,13 +1,1 @@
-<svg width="474.000000" height="474.000000" viewBox="0 0 474 474"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-
-	<!-- <defs>
-		<filter id="filter_7_2_dd" x="0.000000" y="0.000000" width="474.000000" height="474.000000" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-			<feGaussianBlur stdDeviation="50" result="effect_layerBlur_1"/>
-		</filter>
-	</defs> -->
-	<g filter="url(#filter_7_2_dd)">
-		<circle id="Ellipse 3" cx="237.000000" cy="237.000000" r="87.000000"/>
-	</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="474" height="474"><defs><filter id="a" width="474" height="474" x="0" y="0" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect_layerBlur_1" stdDeviation="50"/></filter></defs><g filter="url(#a)"><circle cx="237" cy="237" r="87"/></g></svg>

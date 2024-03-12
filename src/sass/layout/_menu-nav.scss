@@ -10,6 +10,9 @@
         padding-left: 70px;
     }
 }
+.test-bg{
+    background: var.$bg_black_secondary;
+}
 
 .menu_container--img{
    @include mix.flex-center();

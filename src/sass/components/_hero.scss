@@ -3,23 +3,47 @@
 
 .hero__section{
     padding-top: 24px;
+    .hero_container{
+        position: relative;
+    }
     @include mix.flex-center();
     @include mix.mq($bp:lg){
-        display: none;
+        padding: 0;
+        position: relative;
+        .hero_container{
+            position: static;
+        }
+    };
+}
+.hero_img{
+    @include mix.mq($bp:lg){
+       display: none;
     };
 }
 
 .hero_svg--dev{
+      width: 76px;
+      height: 54px;
     @include mix.p-absolute($t:-10px, $l: -13px);
+    @include mix.mq($bp:lg){
+        @include mix.p-absolute($t:-28px, $l: 84px); 
+        width: 94px;
+        height: 65px;
+    };
+    @include mix.mq($bp:xxl){
+        @include mix.p-absolute($t:-42px, $l: 138px); 
+        width: 134px;
+        height: 94px;
+    };
 }
 
-.hero_svg-circle{
-    width: 174px;
-    height: 174px;
-    border-radius: 50%;
-    filter: blur(70px);
-    background: var.$bg_svg_icon;
-    z-index: -1;
-    @include mix.p-absolute($t:0, $r: -87px);
-}
+// .hero_svg-circle{
+//     width: 174px;
+//     height: 174px;
+//     border-radius: 50%;
+//     filter: blur(70px);
+//     background: var.$bg_svg_icon;
+//     z-index: -1;
+//     @include mix.p-absolute($t:0, $r: -87px);
+// }
 

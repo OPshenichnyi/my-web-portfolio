@@ -2,16 +2,30 @@
 @use "../abstracts/mixins" as mix;
 
 .about__section{
+    position: relative;
     padding: 0 28px 0 28px;
     max-width: var.$min-w;
+    height: 320px;
+    margin-bottom: 36px;
     @include mix.flex-center();
     @include mix.mq($bp: lg){
         max-width: var.$mid-w;
-        padding-top: 65px;
+        padding-top: 105px;
+        height: auto;
+        padding-left: 0;
+        padding-right: 0;
     };
     @include mix.mq($bp: xxl){
         max-width: var.$max-w;
         padding-top: 132px;
+
+    };
+}
+
+.about_container{
+    @include mix.p-absolute($t: -30px);
+    @include mix.mq($bp: lg){
+        position: relative;
     };
 }
 
@@ -37,7 +51,7 @@
     @include mix.font-styles($fs:16px, $fw: 600, $lh: 19px, $ls:0px);
     text-transform: uppercase;
     @include mix.mq($bp: lg){
-        @include mix.font-styles($fs: 24px, $lh: 29px);
+        @include mix.font-styles($fs: 22px, $lh: 28px);
     };
     @include mix.mq($bp: xxl){
         @include mix.font-styles($fs: 32px, $lh: 39px);
@@ -45,7 +59,6 @@
 }
 
 .about_description--wrap{
-    // @include mix.flex-center();
     padding: 24px 16px 24px 16px;
     background-color: var.$bg_black_secondary;
     border-radius: 20px;
@@ -64,7 +77,7 @@
 .description--text{
     @include mix.font-styles($fs:12px, $fw: 400, $lh: 15px);
     @include mix.mq($bp:lg){
-        @include mix.font-styles($fs:16px, $lh: 22px);
+        @include mix.font-styles($fs:14px, $lh: 18px);
     }
     @include mix.mq($bp:xxl){
         @include mix.font-styles($fs:24px, $lh: 29px);
@@ -80,6 +93,16 @@
     @include mix.p-absolute($b: -10px , $l: 50%);
     transform: translate(-50%, 0%);
     z-index: -1;
+    @include mix.mq($bp: lg){
+        width: 385px;
+        border-radius: 30px;
+        @include mix.p-absolute($b: -15px , $l: 50%);
+    };
+    @include mix.mq($bp: xxl){
+        width: 742px;
+        border-radius: 40px;
+        @include mix.p-absolute($b: -20px, $l: 50%);
+    };
 
 }
 
@@ -87,12 +110,23 @@
     width: 200px;
     height: 90px;
     border-radius: 10px;
-    background-color: red;
     margin: auto;
     background: linear-gradient(90deg, #E7E5E5 0.04%, #878787 99.94%);
+    @include mix.mq($bp: lg){
+      width: 300px;
+      height: 122px;
+      border-radius: 15px;
+    }
+    @include mix.mq($bp: xxl){
+      width: 408px;
+      height: 145px;
+      border-radius: 20px;
+    }
 }
 
 .about_soft_skill--wrap{
+    @include mix.p-absolute($t: -13px, $l: 50% );
+    transform: translate(-50%);
     display: block;
     width: 220px;
     padding: 8px 28px ;
@@ -100,19 +134,59 @@
     text-align: center;
     color: var.$text-primary-black;
     background: linear-gradient(var.$liner_gradient_grey);
+    @include mix.mq($bp: lg){
+        width: 330px;
+        padding: 12px 28px;
+        @include mix.p-absolute($t: -36px, $l: 50% );
+    }
+    @include mix.mq($bp: xxl){
+        width: 450px;
+        padding: 16px 60px;
+        @include mix.p-absolute($t: -50px, $l: 50% );
+    }
 
     .about_soft_skill--title{
         @include mix.font-styles($fs: 14px, $fw: 600, $lh: 17px);
         color: var.$color-accent;
         text-transform: uppercase;
         margin-bottom: 4px;
+        @include mix.mq($bp: lg){
+           @include mix.font-styles($fs: 22px, $fw: 400, $lh: 24px);
+           margin-bottom: 6px;
+        }
+        @include mix.mq($bp: xxl){
+           @include mix.font-styles($fs: 28px, $fw: 400, $lh: 26px);
+           margin-bottom: 8px;
+        }
     }
 
     .soft_skill_item{
+        @include mix.flex-center();
         @include mix.font-styles($fs: 8px, $fw: 400, $lh: 10px);
+        white-space: nowrap;
         text-transform: uppercase;
         &:not(:last-child){
             margin-bottom: 2px;
+        }
+        @include mix.mq($bp: lg){
+           @include mix.font-styles($fs: 14px, $fw: 400, $lh: 16px);
+            &:not(:last-child){
+            margin-bottom: 3px;
+        }
+        }
+        @include mix.mq($bp: xxl){
+           @include mix.font-styles($fs: 16px, $fw: 400, $lh: 19px);
+            &:not(:last-child){
+            margin-bottom: 4px;
+        }
+        }
+        
+    }
+    .skill_item--svg{
+        @include mix.mq($bp: sm){
+            width: 6px;
+            height: 6px;
+            margin-right: 4px;
         }
     }
 }
