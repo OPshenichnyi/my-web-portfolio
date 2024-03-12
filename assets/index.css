@@ -303,24 +303,16 @@ body {
      -moz-box-align: center;
           align-items: center;
 }
+.hero__section .hero_container {
+  position: relative;
+}
 
 .hero_svg--dev {
+  width: 76px;
+  height: 54px;
   position: absolute;
   left: -13px;
   top: -10px;
-}
-
-.hero_svg-circle {
-  width: 174px;
-  height: 174px;
-  border-radius: 50%;
-  -webkit-filter: blur(70px);
-          filter: blur(70px);
-  background: #E5E5E5;
-  z-index: -1;
-  position: absolute;
-  right: -87px;
-  top: 0;
 }
 
 .d-none {
@@ -408,6 +400,10 @@ body {
   padding-left: 32px;
 }
 
+.test-bg {
+  background: #181818;
+}
+
 .menu_container--img {
   display: -webkit-box;
   display: -webkit-flex;
@@ -479,10 +475,13 @@ body {
   color: #F04C0C;
 }
 
+.footer__bg {
+  background: #E3E3E3;
+}
+
 .footer__block {
   margin: auto;
   text-align: center;
-  background: #E3E3E3;
   color: #000000;
   display: -webkit-box;
   display: -webkit-flex;
@@ -577,8 +576,11 @@ body {
 }
 
 .about__section {
+  position: relative;
   padding: 0 28px 0 28px;
   max-width: 375px;
+  height: 320px;
+  margin-bottom: 36px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -591,6 +593,11 @@ body {
   -webkit-align-items: center;
      -moz-box-align: center;
           align-items: center;
+}
+
+.about_container {
+  position: absolute;
+  top: -30px;
 }
 
 .about_title--wrap {
@@ -656,7 +663,6 @@ body {
   width: 200px;
   height: 90px;
   border-radius: 10px;
-  background-color: red;
   margin: auto;
   background: -webkit-gradient(linear, left top, right top, color-stop(0.04%, #E7E5E5), color-stop(99.94%, #878787));
   background: -webkit-linear-gradient(left, #E7E5E5 0.04%, #878787 99.94%);
@@ -665,6 +671,13 @@ body {
 }
 
 .about_soft_skill--wrap {
+  position: absolute;
+  left: 50%;
+  top: -13px;
+  -webkit-transform: translate(-50%);
+     -moz-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
   display: block;
   width: 220px;
   padding: 8px 28px;
@@ -686,11 +699,24 @@ body {
   margin-bottom: 4px;
 }
 .about_soft_skill--wrap .soft_skill_item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
   font-family: "Inter", sans-serif;
   font-size: 8px;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25;
+  white-space: nowrap;
   text-transform: uppercase;
 }
 .about_soft_skill--wrap .soft_skill_item:not(:last-child) {
@@ -713,6 +739,11 @@ body {
     max-width: 375px;
     padding: 24px 32px 24px 32px;
   }
+  .about_soft_skill--wrap .skill_item--svg {
+    width: 6px;
+    height: 6px;
+    margin-right: 4px;
+  }
 }
 @media only screen and (min-width: 750px) {
   .layout {
@@ -733,17 +764,39 @@ body {
             flex-grow: 1;
     max-width: 100%;
   }
+  .header__contact-link {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.2;
+  }
   .header {
     -webkit-box-pack: end;
     -webkit-justify-content: end;
        -moz-box-pack: end;
             justify-content: end;
+    padding: 45px 36px 0 36px;
   }
   .header .header__burger-menu {
     display: none;
   }
   .hero__section {
+    padding: 0;
+    position: relative;
+  }
+  .hero__section .hero_container {
+    position: static;
+  }
+  .hero_img {
     display: none;
+  }
+  .hero_svg--dev {
+    position: absolute;
+    left: 84px;
+    top: -28px;
+    width: 94px;
+    height: 65px;
   }
   .footer__block {
     max-width: 750px;
@@ -801,7 +854,13 @@ body {
   }
   .about__section {
     max-width: 750px;
-    padding-top: 65px;
+    padding-top: 105px;
+    height: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .about_container {
+    position: relative;
   }
   .about_title--wrap {
     border-radius: 26px;
@@ -809,10 +868,10 @@ body {
   }
   .about__title {
     font-family: "Inter", sans-serif;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 400;
     letter-spacing: 0;
-    line-height: 1.21;
+    line-height: 1.27;
   }
   .about_description--wrap {
     max-width: 430px;
@@ -820,10 +879,52 @@ body {
   }
   .description--text {
     font-family: "Inter", sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     letter-spacing: 0;
-    line-height: 1.38;
+    line-height: 1.29;
+  }
+  .about_shadow {
+    width: 385px;
+    border-radius: 30px;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+  }
+  .about_skill_shadow {
+    width: 300px;
+    height: 122px;
+    border-radius: 15px;
+  }
+  .about_soft_skill--wrap {
+    width: 330px;
+    padding: 12px 28px;
+    position: absolute;
+    left: 50%;
+    top: -36px;
+  }
+  .about_soft_skill--wrap .about_soft_skill--title {
+    font-family: "Inter", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.09;
+    margin-bottom: 6px;
+  }
+  .about_soft_skill--wrap .soft_skill_item {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.14;
+  }
+  .about_soft_skill--wrap .soft_skill_item:not(:last-child) {
+    margin-bottom: 3px;
+  }
+}
+@media only screen and (min-width: 750px) and (min-width: 1400px) {
+  .header {
+    padding: 80px 70px 0 70px;
   }
 }
 @media only screen and (min-width: 1400px) {
@@ -832,6 +933,20 @@ body {
   }
   .menu__block {
     width: 300px;
+  }
+  .header__contact-link {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.21;
+  }
+  .hero_svg--dev {
+    position: absolute;
+    left: 138px;
+    top: -42px;
+    width: 134px;
+    height: 94px;
   }
   .menu__block {
     padding-top: 44px;
@@ -906,6 +1021,43 @@ body {
     font-weight: 400;
     letter-spacing: 0;
     line-height: 1.21;
+  }
+  .about_shadow {
+    width: 742px;
+    border-radius: 40px;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+  }
+  .about_skill_shadow {
+    width: 408px;
+    height: 145px;
+    border-radius: 20px;
+  }
+  .about_soft_skill--wrap {
+    width: 450px;
+    padding: 16px 60px;
+    position: absolute;
+    left: 50%;
+    top: -50px;
+  }
+  .about_soft_skill--wrap .about_soft_skill--title {
+    font-family: "Inter", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 0.93;
+    margin-bottom: 8px;
+  }
+  .about_soft_skill--wrap .soft_skill_item {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.19;
+  }
+  .about_soft_skill--wrap .soft_skill_item:not(:last-child) {
+    margin-bottom: 4px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
