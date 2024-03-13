@@ -1,0 +1,80 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+
+.skill__section{
+    padding: 0 28px;
+    margin-bottom: 36px;
+}
+
+.skill__section--title{
+    @include mix.font-styles($fs: 36px, $fw: 600, $lh:44px);
+    text-transform: uppercase;
+    margin-bottom: 44px;
+}
+
+.skill_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 36px;
+    column-gap: 9px;
+
+    .skill_item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 155px;
+        background: var.$bg_black_secondary;
+        border: 1px solid var.$border_color_grey;
+        border-radius: 12px;
+        padding-top: 35px;
+        padding-bottom: 12px;
+
+    }
+    .skill_svg--wrap{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 55px;
+        height: 55px;
+        border-radius: 100%;
+        background: var.$bg_grey_secondary;
+        @include mix.p-absolute($t:-27px);
+    }
+    .skill_svg{
+        width: 30px;
+        height: 30px;
+        fill: var.$bg_primary;
+        &.js{
+            width: 28px;
+            height: 23px;
+        }
+        &.postman{
+            width: 37px;
+            height: 35px;
+        }
+
+        &.figma{
+            width: 20px;
+            height: 30px;
+        }
+
+        &.node{
+            width: 36px;
+            height: 36px;
+        }
+    }
+    .skill_name{
+        @include mix.font-styles($fs: 24px, $fw:400, $lh: 29px);
+        text-transform: uppercase;
+    }
+    .skill_name--fs-s{
+        @include mix.font-styles($fs: 18px, $fw:400, $lh: 22px);
+        text-transform: uppercase;
+    }
+
+}
+
+
