@@ -1,0 +1,62 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.portfolio__section{
+    position: relative;
+    padding: 0 28px;
+    margin-bottom: 36px;
+}
+
+.portfolio_section--title{
+    @include mix.font-styles($fs: 36px, $fw: 600, $lh:44px);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    @include mix.mq($bp: lg){
+        display: none;
+    }
+}
+
+.portfolio_svg--dev{
+    width: 78px;
+    height: 56px;
+    transform: rotate(19deg);
+    @include mix.p-absolute($t:-12px, $r:28px);
+}
+
+.portfolio_list{
+    @include mix.mq($bp: lg){
+        @include mix.flex-center($is-column: false);
+    }
+    
+}
+
+.portfolio_list--item{
+    text-align: center;
+    margin-bottom: 16px;
+    .portfolio_item--img{
+        width: 340px;
+        height: 200px;
+        margin-bottom: 8px;
+        @include mix.mq($bp: lg){
+            width: 180px;
+            height: 110px;
+            column-gap: 6px;
+        }
+    }
+    .portfolio_item--title{
+        @include mix.font-styles($fs:24px, $fw: 600, $lh: 29px);
+        text-transform: uppercase;
+    }
+}
+
+.portfolio_btn--link{
+    max-width: 140px;
+    padding: 7px 33px;
+    background: var.$bg_accent;
+    border-radius: 20px;
+    @include mix.flex-center();
+    margin: auto;
+    @include mix.font-styles($fs:16px, $fw: 400, $lh:19px);
+    text-transform: uppercase;
+    cursor: pointer;
+}

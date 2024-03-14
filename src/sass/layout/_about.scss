@@ -14,6 +14,7 @@
         height: auto;
         padding-left: 0;
         padding-right: 0;
+        margin-bottom: 86px
     };
     @include mix.mq($bp: xxl){
         max-width: var.$max-w;

@@ -76,6 +76,9 @@
         width: 30px;
         height: 30px;
         fill: var.$bg_primary;
+        &.stroke{
+            stroke: var.$bg_primary;
+        }
         @include mix.mq($bp: lg){
             width: 28px;
             height: 28px;
