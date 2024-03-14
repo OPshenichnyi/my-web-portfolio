@@ -1015,20 +1015,29 @@ body {
   .about_soft_skill--wrap .soft_skill_item:not(:last-child) {
     margin-bottom: 3px;
   }
+  .skill__section--title {
+    display: none;
+  }
+  .skill_list {
+    row-gap: 45px;
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
+  }
   .skill_list .skill_item {
     width: 120px;
-    padding-top: 25px;
+    padding-top: 30px;
     padding-bottom: 10px;
   }
   .skill_list .skill_svg--wrap {
-    width: 40px;
-    height: 40px;
+    width: 46px;
+    height: 46px;
     position: absolute;
-    top: -20px;
+    top: -23px;
   }
   .skill_list .skill_svg {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
   }
   .skill_list .skill_name {
     font-family: "Inter", sans-serif;
@@ -1183,14 +1192,11 @@ body {
   .about_soft_skill--wrap .soft_skill_item:not(:last-child) {
     margin-bottom: 4px;
   }
-  .skill__section--title {
-    display: none;
-  }
   .skill_list {
+    row-gap: 68px;
     -webkit-column-gap: 12px;
        -moz-column-gap: 12px;
             column-gap: 12px;
-    row-gap: 68px;
   }
   .skill_list .skill_item {
     width: 250px;
