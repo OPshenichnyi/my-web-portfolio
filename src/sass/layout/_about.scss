@@ -18,6 +18,7 @@
     @include mix.mq($bp: xxl){
         max-width: var.$max-w;
         padding-top: 132px;
+        margin-bottom: 192px;
 
     };
 }
