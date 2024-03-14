@@ -11,7 +11,7 @@
     @include mix.font-styles($fs: 36px, $fw: 600, $lh:44px);
     text-transform: uppercase;
     margin-bottom: 44px;
-    @include mix.mq($bp: xxl){
+    @include mix.mq($bp: lg){
         display: none;
     }
 }
@@ -22,10 +22,13 @@
     justify-content: center;
     row-gap: 36px;
     column-gap: 9px;
-
+    @include mix.mq($bp: lg){
+       row-gap: 45px; 
+       column-gap: 10px;
+    }
     @include mix.mq($bp: xxl){
-       column-gap: 12px;
        row-gap: 68px; 
+       column-gap: 12px;
     }
 
     .skill_item{
@@ -41,7 +44,7 @@
         padding-bottom: 12px;
         @include mix.mq($bp: lg){
             width: 120px;
-            padding-top: 25px;
+            padding-top: 30px;
             padding-bottom: 10px;
         }
         @include mix.mq($bp: xxl){
@@ -59,9 +62,9 @@
         border-radius: 100%;
         background: var.$bg_grey_secondary;
         @include mix.mq($bp: lg){
-            width: 40px;
-            height: 40px;
-            @include mix.p-absolute($t:-20px);
+            width: 46px;
+            height: 46px;
+            @include mix.p-absolute($t:-23px);
         }
         @include mix.mq($bp: xxl){
             width: 86px;
@@ -74,8 +77,8 @@
         height: 30px;
         fill: var.$bg_primary;
         @include mix.mq($bp: lg){
-            width: 24px;
-            height: 24px;
+            width: 28px;
+            height: 28px;
         }
         @include mix.mq($bp: xxl){
             width: 45px;
