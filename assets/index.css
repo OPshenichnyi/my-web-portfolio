@@ -788,33 +788,17 @@ body {
   -webkit-align-items: center;
      -moz-box-align: center;
           align-items: center;
+  position: absolute;
+  top: -27px;
   width: 55px;
   height: 55px;
   border-radius: 100%;
   background: #E1E1E1;
-  position: absolute;
-  top: -27px;
 }
 .skill_list .skill_svg {
   width: 30px;
   height: 30px;
   fill: #030303;
-}
-.skill_list .skill_svg.js {
-  width: 28px;
-  height: 23px;
-}
-.skill_list .skill_svg.postman {
-  width: 37px;
-  height: 35px;
-}
-.skill_list .skill_svg.figma {
-  width: 20px;
-  height: 30px;
-}
-.skill_list .skill_svg.node {
-  width: 36px;
-  height: 36px;
 }
 .skill_list .skill_name {
   font-family: "Inter", sans-serif;
@@ -1031,6 +1015,35 @@ body {
   .about_soft_skill--wrap .soft_skill_item:not(:last-child) {
     margin-bottom: 3px;
   }
+  .skill_list .skill_item {
+    width: 120px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+  }
+  .skill_list .skill_svg--wrap {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -20px;
+  }
+  .skill_list .skill_svg {
+    width: 24px;
+    height: 24px;
+  }
+  .skill_list .skill_name {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.2;
+  }
+  .skill_list .skill_name--fs-s {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.21;
+  }
 }
 @media only screen and (min-width: 750px) and (min-width: 1400px) {
   .header {
@@ -1109,6 +1122,7 @@ body {
   .about__section {
     max-width: 1440px;
     padding-top: 132px;
+    margin-bottom: 192px;
   }
   .about_title--wrap {
     border-radius: 36px;
@@ -1168,6 +1182,44 @@ body {
   }
   .about_soft_skill--wrap .soft_skill_item:not(:last-child) {
     margin-bottom: 4px;
+  }
+  .skill__section--title {
+    display: none;
+  }
+  .skill_list {
+    -webkit-column-gap: 12px;
+       -moz-column-gap: 12px;
+            column-gap: 12px;
+    row-gap: 68px;
+  }
+  .skill_list .skill_item {
+    width: 250px;
+    padding-top: 52px;
+    padding-bottom: 20px;
+  }
+  .skill_list .skill_svg--wrap {
+    width: 86px;
+    height: 86px;
+    position: absolute;
+    top: -43px;
+  }
+  .skill_list .skill_svg {
+    width: 45px;
+    height: 50px;
+  }
+  .skill_list .skill_name {
+    font-family: "Inter", sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.2;
+  }
+  .skill_list .skill_name--fs-s {
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.22;
   }
 }
 @media (prefers-reduced-motion: reduce) {
