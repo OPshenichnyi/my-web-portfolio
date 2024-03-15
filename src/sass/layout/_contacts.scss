@@ -1,0 +1,42 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.contacts__section{
+    margin-bottom: 36px;
+}
+
+.contacts_title{
+    @include mix.font-styles($fs: 36px, $fw: 600, $lh:44px);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.contacts_title--propos{
+    max-width: 290px;
+    margin: auto;
+    text-align: center;
+    @include mix.font-styles($fs: 18px, $fw: 400, $lh:22px);
+    margin-bottom: 24px;
+}
+
+.contacts_list-item{
+    &:not(:last-child){
+        margin-bottom: 10px;
+    }
+}
+
+.contacts_item_link{
+    @include mix.flex-center();
+    
+    .contacts_svg{
+        width: 27px;
+        height: 25px;
+        stroke: var.$bg_svg_icon;
+        margin-right: 8px;
+    }
+    .contacts_title--item{
+        @include mix.font-styles($fs: 14px, $fw: 400, $lh:17px);
+        text-transform: uppercase;
+    }
+}
