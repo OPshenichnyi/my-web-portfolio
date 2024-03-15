@@ -844,9 +844,6 @@ body {
      -moz-transform: rotate(19deg);
       -ms-transform: rotate(19deg);
           transform: rotate(19deg);
-  position: absolute;
-  right: 28px;
-  top: -12px;
 }
 
 .portfolio_list--item {
@@ -869,6 +866,7 @@ body {
 
 .portfolio_btn--link {
   max-width: 140px;
+  margin: auto;
   padding: 7px 33px;
   background: #F04C0C;
   border-radius: 20px;
@@ -884,7 +882,6 @@ body {
   -webkit-align-items: center;
      -moz-box-align: center;
           align-items: center;
-  margin: auto;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -915,6 +912,15 @@ body {
     width: 6px;
     height: 6px;
     margin-right: 4px;
+  }
+  .portfolio_svg--dev {
+    position: absolute;
+    right: 28px;
+    top: -12px;
+    -webkit-transform: rotate(19deg);
+       -moz-transform: rotate(19deg);
+        -ms-transform: rotate(19deg);
+            transform: rotate(19deg);
   }
 }
 
@@ -1095,6 +1101,9 @@ body {
   .about_soft_skill--wrap .soft_skill_item:not(:last-child) {
     margin-bottom: 3px;
   }
+  .skill__section {
+    margin-bottom: 86px;
+  }
   .skill__section--title {
     display: none;
   }
@@ -1133,8 +1142,24 @@ body {
     letter-spacing: 0;
     line-height: 1.21;
   }
+  .portfolio__section {
+    padding-bottom: 60px;
+    margin-bottom: 28px;
+  }
   .portfolio_section--title {
     display: none;
+  }
+  .portfolio_svg--dev {
+    width: 98px;
+    height: 76px;
+    position: absolute;
+    bottom: 0;
+    right: 6px;
+    top: auto;
+    -webkit-transform: rotate(34deg);
+       -moz-transform: rotate(34deg);
+        -ms-transform: rotate(34deg);
+            transform: rotate(34deg);
   }
   .portfolio_list {
     display: -webkit-box;
@@ -1149,13 +1174,33 @@ body {
     -webkit-align-items: center;
        -moz-box-align: center;
             align-items: center;
+    margin-bottom: 40px;
+    gap: 4px;
+  }
+  .portfolio_list--item {
+    margin-bottom: 0;
   }
   .portfolio_list--item .portfolio_item--img {
-    width: 180px;
+    width: 170px;
     height: 110px;
-    -webkit-column-gap: 6px;
-       -moz-column-gap: 6px;
-            column-gap: 6px;
+    margin-bottom: 12px;
+  }
+  .portfolio_list--item .portfolio_item--title {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.22;
+  }
+  .portfolio_btn--link {
+    font-family: "Inter", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.32;
+    max-width: 220px;
+    padding: 10px 58px;
+    border-radius: 32px;
   }
 }
 
@@ -1299,6 +1344,9 @@ body {
   .about_soft_skill--wrap .soft_skill_item:not(:last-child) {
     margin-bottom: 4px;
   }
+  .skill__section {
+    margin-bottom: 150px;
+  }
   .skill_list {
     row-gap: 68px;
     -webkit-column-gap: 12px;
@@ -1331,6 +1379,40 @@ body {
     font-family: "Inter", sans-serif;
     font-size: 32px;
     font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.22;
+  }
+  .portfolio__section {
+    padding-bottom: 80px;
+    margin-bottom: 50px;
+  }
+  .portfolio_svg--dev {
+    width: 134px;
+    height: 94px;
+  }
+  .portfolio_list {
+    margin-bottom: 60px;
+    gap: 9px;
+  }
+  .portfolio_list--item .portfolio_item--img {
+    width: 340px;
+    height: 200px;
+    margin-bottom: 16px;
+  }
+  .portfolio_list--item .portfolio_item--title {
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.22;
+  }
+  .portfolio_btn--link {
+    max-width: 300px;
+    padding: 14px 75px;
+    border-radius: 42px;
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
     letter-spacing: 0;
     line-height: 1.22;
   }
