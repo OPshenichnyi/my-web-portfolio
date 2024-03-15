@@ -5,6 +5,12 @@
 .skill__section{
     padding: 0 28px;
     margin-bottom: 36px;
+    @include mix.mq($bp: lg){
+        margin-bottom: 86px;
+    }
+    @include mix.mq($bp: xxl){
+        margin-bottom: 150px;
+    }
 }
 
 .skill__section--title{

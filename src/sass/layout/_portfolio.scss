@@ -4,7 +4,16 @@
 .portfolio__section{
     position: relative;
     padding: 0 28px;
+    
     margin-bottom: 36px;
+    @include mix.mq($bp: lg){
+        padding-bottom: 60px;
+        margin-bottom: 28px;
+    }
+    @include mix.mq($bp: xxl){
+        padding-bottom: 80px;
+        margin-bottom: 50px;
+    }
 }
 
 .portfolio_section--title{
@@ -20,12 +29,32 @@
     width: 78px;
     height: 56px;
     transform: rotate(19deg);
-    @include mix.p-absolute($t:-12px, $r:28px);
+    @include mix.mq($bp: sm){
+        @include mix.p-absolute($t:-12px, $r:28px);
+        transform: rotate(19deg);
+    }
+    
+    @include mix.mq($bp: lg){
+        width: 98px;
+        height: 76px;
+        @include mix.p-absolute($t: auto, $b: 0, $r: 6px);
+        transform: rotate(34deg);
+    };
+    @include mix.mq($bp: xxl){
+        width: 134px;
+        height: 94px;
+    }
 }
 
 .portfolio_list{
     @include mix.mq($bp: lg){
         @include mix.flex-center($is-column: false);
+        margin-bottom: 40px;
+        gap: 4px;
+    }
+    @include mix.mq($bp: xxl){
+        margin-bottom: 60px;
+        gap: 9px;
     }
     
 }
@@ -33,30 +62,58 @@
 .portfolio_list--item{
     text-align: center;
     margin-bottom: 16px;
+    @include mix.mq($bp: lg){
+        margin-bottom: 0;
+    }
+    
+
     .portfolio_item--img{
         width: 340px;
         height: 200px;
         margin-bottom: 8px;
         @include mix.mq($bp: lg){
-            width: 180px;
+            width: 170px;
             height: 110px;
-            column-gap: 6px;
+            margin-bottom: 12px;
+        }
+        @include mix.mq($bp: xxl){
+            width: 340px;
+            height: 200px;
+            margin-bottom: 16px;
         }
     }
     .portfolio_item--title{
         @include mix.font-styles($fs:24px, $fw: 600, $lh: 29px);
         text-transform: uppercase;
+        @include mix.mq($bp: lg){
+            @include mix.font-styles($fs: 18px, $lh: 22px);
+        }
+        @include mix.mq($bp: xxl){
+            @include mix.font-styles($fs: 32px, $lh: 39px);
+        }
     }
 }
 
 .portfolio_btn--link{
     max-width: 140px;
+    margin: auto;
     padding: 7px 33px;
     background: var.$bg_accent;
     border-radius: 20px;
     @include mix.flex-center();
-    margin: auto;
     @include mix.font-styles($fs:16px, $fw: 400, $lh:19px);
     text-transform: uppercase;
     cursor: pointer;
+    @include mix.mq($bp: lg){
+        @include mix.font-styles($fs: 22px, $lh: 29px);
+        max-width: 220px;
+        padding: 10px 58px;
+        border-radius: 32px;
+    }
+    @include mix.mq($bp: xxl){
+        max-width: 300px;
+        padding: 14px 75px;
+        border-radius: 42px;
+        @include mix.font-styles($fs: 32px, $lh: 39px);
+    }
 }
