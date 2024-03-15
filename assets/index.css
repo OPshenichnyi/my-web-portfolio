@@ -891,6 +891,65 @@ body {
   cursor: pointer;
 }
 
+.contacts__section {
+  margin-bottom: 36px;
+}
+
+.contacts_title {
+  font-family: "Inter", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.22;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.contacts_title--propos {
+  max-width: 290px;
+  margin: auto;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.22;
+  margin-bottom: 24px;
+}
+
+.contacts_list-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.contacts_item_link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+}
+.contacts_item_link .contacts_svg {
+  width: 27px;
+  height: 25px;
+  stroke: #E5E5E5;
+  margin-right: 8px;
+}
+.contacts_item_link .contacts_title--item {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.21;
+  text-transform: uppercase;
+}
 @media only screen and (min-width: 375px) {
   .header {
     display: -webkit-box;
@@ -923,7 +982,6 @@ body {
             transform: rotate(19deg);
   }
 }
-
 @media only screen and (min-width: 750px) {
   .layout {
     max-width: 750px;
@@ -1203,13 +1261,11 @@ body {
     border-radius: 32px;
   }
 }
-
 @media only screen and (min-width: 750px) and (min-width: 1400px) {
   .header {
     padding: 80px 70px 0 70px;
   }
 }
-
 @media only screen and (min-width: 1400px) {
   .layout {
     max-width: 1440px;
@@ -1417,7 +1473,6 @@ body {
     line-height: 1.22;
   }
 }
-
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
