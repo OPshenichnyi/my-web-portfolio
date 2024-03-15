@@ -1,10 +1,9 @@
 import imagemin from 'imagemin';
 import imageminWebp from 'imagemin-webp';
-// import path, { resolve } from 'path';
-import { resolve } from 'path';
+import path from 'path';
 import { defineConfig } from 'vite';
-// import glob from 'fast-glob';
-// import { fileURLToPath } from 'url';
+import glob from 'fast-glob';
+import { fileURLToPath } from 'url';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import IconSpritePlugin from './plugins/vite-plugin-icon-sprite';
 
@@ -36,21 +35,18 @@ export default defineConfig({
   build: {
     minify: false, // disable minification
     rollupOptions: {
-      // input: Object.fromEntries(
-      //   glob
-      //     .sync(['./*.html', './pages/**/*.html'])
-      //     .map(file => [
-      //       path.relative(
-      //         __dirname,
-      //         file.slice(0, file.length - path.extname(file).length)
-      //       ),
-      //       fileURLToPath(new URL(file, import.meta.url)),
-      //     ])
-      // ),
-      input: {
-        main: resolve(__dirname, 'index.html'),
-        portfolio: resolve(__dirname, 'pages/index.html'),
-      },
+      input: Object.fromEntries(
+        glob
+          .sync(['./*.html', './pages/**/*.html'])
+          .map(file => [
+            path.relative(
+              __dirname,
+              file.slice(0, file.length - path.extname(file).length)
+            ),
+            fileURLToPath(new URL(file, import.meta.url)),
+          ])
+      ),
+
       // output unminified CSS file
       output: {
         assetFileNames: 'assets/[name].[ext]',
