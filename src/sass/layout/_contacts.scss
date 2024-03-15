@@ -3,6 +3,16 @@
 
 .contacts__section{
     margin-bottom: 36px;
+    @include mix.mq($bp: lg){
+        padding-left: 28px;
+        padding-right: 28px;
+        margin-bottom: 86px;
+    }
+    @include mix.mq($bp: xxl){
+        padding-left: 38px;
+        padding-right: 38px;
+        margin-bottom: 60px;
+    }
 }
 
 .contacts_title{
@@ -10,6 +20,14 @@
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 16px;
+    @include mix.mq($bp: lg){
+        @include mix.font-styles($fs: 32px, $fw: 600, $lh:42px);
+        text-align: start;
+    }
+    @include mix.mq($bp: xxl){
+        @include mix.font-styles($fs: 60px, $fw: 600, $lh: 73px);
+        margin-bottom: 24px;
+    }
 }
 
 .contacts_title--propos{
@@ -18,25 +36,66 @@
     text-align: center;
     @include mix.font-styles($fs: 18px, $fw: 400, $lh:22px);
     margin-bottom: 24px;
+    @include mix.mq($bp: lg){
+        @include mix.font-styles($fs: 20px, $fw: 400, $lh: 25px);
+        max-width: 100%;
+        margin: 0;
+        text-align: start;
+        margin-bottom: 55px;
+    }
+    @include mix.mq($bp: xxl){
+        @include mix.font-styles($fs: 24px, $fw: 400, $lh: 29px);
+        margin-bottom: 80px;
+    }
 }
 
 .contacts_list-item{
     &:not(:last-child){
         margin-bottom: 10px;
     }
+    @include mix.mq($bp: gl){
+    &:not(:last-child){
+        margin-bottom: 16px;
+    }
+    }
+    @include mix.mq($bp: xxl){
+    &:not(:last-child){
+        margin-bottom: 24px;
+    }        
+    }
+  
 }
 
 .contacts_item_link{
     @include mix.flex-center();
-    
+    @include mix.mq($bp: lg){
+        justify-content: flex-start;
+    }
+
     .contacts_svg{
         width: 27px;
         height: 25px;
         stroke: var.$bg_svg_icon;
         margin-right: 8px;
+        @include mix.mq($bp: lg){
+            width: 36px;
+            height: 34px;
+            margin-right: 12px;
+        }
+        @include mix.mq($bp: xxl){
+            width: 62px;
+            height: 50px;
+            margin-right: 24px;
+        }
     }
     .contacts_title--item{
         @include mix.font-styles($fs: 14px, $fw: 400, $lh:17px);
         text-transform: uppercase;
+        @include mix.mq($bp: lg){
+            @include mix.font-styles($fs: 18px, $fw: 400, $lh: 25px);
+        }
+        @include mix.mq($bp: xxl){
+            @include mix.font-styles($fs: 32px, $fw: 400, $lh: 40px);
+        }
     }
 }
