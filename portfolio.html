@@ -6,6 +6,251 @@
     <title>Portfolio</title>
   </head>
   <body>
-    Portfolio
+    <div class="layout">
+      <nav class="menu__block">
+        <div class="menu_container--img"></div>
+        <ul class="menu_navigation--list">
+          <li class="navigation--item">
+            <a href="#section-about">about me</a>
+          </li>
+          <li class="navigation--item">
+            <a href="#section-skills">skills</a>
+          </li>
+          <li class="navigation--item">
+            <a href="#section-portfolio">portfolio</a>
+          </li>
+          <li class="navigation--item">
+            <a href="#section-contacts">contacts</a>
+          </li>
+        </ul>
+        <ul class="social_link_list">
+          <li class="social_item">
+            <a
+              class="social_item--link"
+              href="https://www.linkedin.com/in/oleksandrpshenychnyi"
+              target="_blank"
+            >
+              <svg width="24" height="24" class="svg-footer">
+                <use xlink:href="/icon-sprite.svg#linkedin"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social_item">
+            <a
+              class="social_item--link"
+              href="https://github.com/OPshenichnyi"
+              target="_blank"
+            >
+              <svg width="24" height="24" class="svg-footer">
+                <use xlink:href="/icon-sprite.svg#git"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social_item">
+            <a
+              class="social_item--link"
+              href="https://t.me/Olexander_PS"
+              target="_blank"
+            >
+              <svg width="24" height="24" class="svg-footer">
+                <use xlink:href="/icon-sprite.svg#telegram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social_item">
+            <a
+              class="social_item--link"
+              href="https://drive.google.com/file/d/1CNA_8Cz9YR9Yy12TpgEq3WJWfHn1S1zJ/view?usp=sharing"
+              target="_blank"
+            >
+              CV
+            </a>
+          </li>
+        </ul>
+        <h4 class="menu_block--name">
+          Oleksandr pshenychnyi
+        </h4>
+        <h3 class="menu_block--profession">fullstack developer</h3>
+      </nav>
+      <div class="layout_block--main">
+        <header class="header">
+          <button type="button" class="header__burger-menu">
+            <svg width="27" height="20" class="header__burger-menu-icon">
+              <use xlink:href="/icon-sprite.svg#burger"></use>
+            </svg>
+          </button>
+          <address class="header__address">
+            <a class="header__contact-link" href="tel:+48 783 689 644">
+              <svg width="20" height="20" class="header__phone-icon">
+                <use xlink:href="/icon-sprite.svg#phone"></use>
+              </svg>
+              +48 783 689 644</a
+            >
+          </address>
+        </header>
+        <main class="main__block grid_main">
+          <section class="portfolio__section">
+            <h3 class="portfolio_section--title">Portfolio</h3>
+            <svg class="portfolio_svg--dev">
+              <use xlink:href="/icon-sprite.svg#dev-symbol"></use>
+            </svg>
+            <ul class="portfolio_list">
+              <li class="portfolio_list--item">
+                <img
+                  src="/src/img/img/webstudio.png"
+                  class="portfolio_item--img"
+                  alt="foto website studio"
+                />
+                <h4 class="portfolio_item--title">webstudio</h4>
+              </li>
+              <li class="portfolio_list--item">
+                <img
+                  src="/src/img/img/thewatchspot.png"
+                  class="portfolio_item--img"
+                  alt="foto website studio"
+                />
+                <h4 class="portfolio_item--title">Thewatchspot</h4>
+              </li>
+              <li class="portfolio_list--item">
+                <img
+                  src="/src/img/img/webbook.png"
+                  class="portfolio_item--img"
+                  alt="foto website studio"
+                />
+                <h4 class="portfolio_item--title">Web book</h4>
+              </li>
+            </ul>
+            <a href="/portfolio.html" class="portfolio_btn--link">View all</a>
+          </section>
+          <section class="contacts__section">
+            <h2 class="contacts_title">Do you need a developer? Contact me!</h2>
+            <h3 class="contacts_title--propos">
+              I can help you develop a website with ease!
+            </h3>
+            <ul class="contacts_list">
+              <li class="contacts_list-item">
+                <a
+                  href="mailto:olexandr.pshenychnyi@gmail.com"
+                  class="contacts_item_link"
+                >
+                  <svg class="contacts_svg">
+                    <use xlink:href="/icon-sprite.svg#email"></use>
+                  </svg>
+                  <span class="contacts_title--item"
+                    >olexandr.pshenychnyi@gmail.com</span
+                  >
+                </a>
+              </li>
+              <li class="contacts_list-item">
+                <a href="tel:+48 783 689 644" class="contacts_item_link">
+                  <svg class="contacts_svg">
+                    <use xlink:href="/icon-sprite.svg#phone"></use>
+                  </svg>
+                  <span class="contacts_title--item">+48 783 689 644</span>
+                </a>
+              </li>
+              <li class="contacts_list-item">
+                <a
+                  href="https://www.linkedin.com/in/oleksandrpshenychnyi"
+                  target="_blank"
+                  class="contacts_item_link"
+                >
+                  <svg class="contacts_svg">
+                    <use xlink:href="/icon-sprite.svg#linkedin"></use>
+                  </svg>
+                  <span class="contacts_title--item">Linkedin</span>
+                </a>
+              </li>
+              <li class="contacts_list-item">
+                <a
+                  href="https://t.me/Olexander_PS"
+                  target="_blank"
+                  class="contacts_item_link"
+                >
+                  <svg class="contacts_svg">
+                    <use xlink:href="/icon-sprite.svg#telegram"></use>
+                  </svg>
+                  <span class="contacts_title--item">telegram</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </main>
+      </div>
+    </div>
+    <footer class="footer__bg">
+      <div class="footer__block">
+        <div class="navigation_block_footer">
+          <ul class="navigation_footer--list">
+            <li class="navigation_footer--item">
+              <a href="#section-about">about me</a>
+            </li>
+            <li class="navigation_footer--item">
+              <a href="#section-skills">skills</a>
+            </li>
+            <li class="navigation_footer--item">
+              <a href="#section-portfolio">portfolio</a>
+            </li>
+            <li class="navigation_footer--item">
+              <a href="#section-contacts">contacts</a>
+            </li>
+          </ul>
+          <div class="navigation_wrap--phone-social">
+            <a class="footer_link--phone" href="tel:+48 783 689 644">
+              <svg width="20" height="20" class="footer_link--svg">
+                <use xlink:href="/icon-sprite.svg#phone"></use>
+              </svg>
+              +48 783 689 644
+            </a>
+            <ul class="social_link_list--footer">
+              <li class="social_item_link--footer">
+                <a
+                  class="social_item_footer--link"
+                  href="https://www.linkedin.com/in/oleksandrpshenychnyi"
+                  target="_blank"
+                >
+                  <svg width="24" height="24" class="svg-footer">
+                    <use xlink:href="/icon-sprite.svg#linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social_item_link--footer">
+                <a
+                  class="social_item_footer--link"
+                  href="https://github.com/OPshenichnyi"
+                  target="_blank"
+                >
+                  <svg width="24" height="24" class="svg-footer">
+                    <use xlink:href="/icon-sprite.svg#git"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social_item_link--footer">
+                <a
+                  class="social_item_footer--link"
+                  href="https://t.me/Olexander_PS"
+                  target="_blank"
+                >
+                  <svg width="24" height="24" class="svg-footer">
+                    <use xlink:href="/icon-sprite.svg#telegram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social_item_link--footer">
+                <a
+                  class="social_item_footer--link"
+                  href="https://drive.google.com/file/d/1CNA_8Cz9YR9Yy12TpgEq3WJWfHn1S1zJ/view?usp=sharing"
+                  target="_blank"
+                >
+                  CV
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <small class="footer_small--text">© Oleksandr pshenychnyi, 2024</small>
+      </div>
+    </footer>
+    <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>

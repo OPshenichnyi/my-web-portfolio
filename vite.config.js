@@ -29,6 +29,9 @@ export default defineConfig({
       apply: 'serve',
     },
   ],
+  server: {
+    historyApiFallback: true,
+  },
   build: {
     minify: false, // disable minification
     rollupOptions: {
