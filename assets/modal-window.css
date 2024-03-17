@@ -1004,6 +1004,20 @@ body {
 .modal_window_backdrop .menu_navigation--list {
   margin-bottom: 36px;
 }
+.modal_window_backdrop .menu_block--name {
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.21;
+}
+.modal_window_backdrop .menu_block--profession {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.21;
+}
 @media only screen and (min-width: 375px) {
   .header {
     display: -webkit-box;
