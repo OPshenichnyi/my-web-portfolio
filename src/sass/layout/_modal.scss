@@ -2,8 +2,10 @@
 @use "../abstracts/mixins" as mix;
 
 .modal_window_backdrop{
-    // @include mix.flex-center();
-    padding: 83px 162px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 28px 162px 28px 28px;
     position: fixed;
     top: 0;
     left: 0;
@@ -21,3 +23,15 @@
     opacity: 1;
 }
 
+.backdrop__close--btn{
+    margin-bottom: 36px;
+}
+
+.modal_window_backdrop{
+    .navigation--item{
+        @include mix.font-styles($fs:32px, $fw: 500, $lh:39px,);
+    }
+    .menu_navigation--list{
+        margin-bottom: 36px;
+    }
+}
