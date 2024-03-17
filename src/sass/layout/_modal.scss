@@ -34,4 +34,10 @@
     .menu_navigation--list{
         margin-bottom: 36px;
     }
+    .menu_block--name{
+        @include mix.font-styles($fs:28px, $fw: 400, $lh:34px,);
+    }
+    .menu_block--profession{
+        @include mix.font-styles($fs:14px, $fw: 400, $lh:17px,);
+    }
 }
