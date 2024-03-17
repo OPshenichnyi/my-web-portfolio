@@ -1,0 +1,23 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.modal_window_backdrop{
+    // @include mix.flex-center();
+    padding: 83px 162px 28px 28px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background: var.$bg_primary;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.show{
+    visibility: visible;
+    opacity: 1;
+}
+

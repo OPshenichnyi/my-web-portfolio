@@ -43,6 +43,12 @@
 .navigation--item{
     @include mix.font-styles($fs:16px, $fw: 300, $lh:39px,);
     text-transform: uppercase;
+    @include mix.mq($bp: lg){
+        cursor: pointer;
+        &:hover{
+            color: var.$color-accent;
+        }
+    }
     @include mix.mq($bp: xxl){
         @include mix.font-styles($fs: 32px, $fw: 300, $lh: 39px, $ls: 0);
     }
@@ -57,6 +63,13 @@
 
 .social_item--link{
     stroke: var.$text-primary-white;
+    @include mix.mq($bp: lg){
+        cursor: pointer;
+        &:hover{
+            stroke: var.$color-accent;
+        }
+    }
+    
 }
 
 .menu_block--name{

@@ -96,25 +96,30 @@
 }
 
 .portfolio_btn--link{
-    max-width: 140px;
+    max-width: 146px;
     margin: auto;
     padding: 7px 33px;
     background: var.$bg_accent;
+    // background: var.$bg_grey_primary;
     border-radius: 20px;
+    border: 3px solid var.$bg_accent;
     @include mix.flex-center();
     @include mix.font-styles($fs:16px, $fw: 400, $lh:19px);
     text-transform: uppercase;
     cursor: pointer;
     @include mix.mq($bp: lg){
         @include mix.font-styles($fs: 22px, $lh: 29px);
-        max-width: 220px;
+        max-width: 228px;
         padding: 10px 58px;
         border-radius: 32px;
     }
     @include mix.mq($bp: xxl){
-        max-width: 300px;
+        max-width: 308px;
         padding: 14px 75px;
         border-radius: 42px;
         @include mix.font-styles($fs: 32px, $lh: 39px);
+    }
+    &:hover{
+        background-color: var.$text-primary-black;
     }
 }
