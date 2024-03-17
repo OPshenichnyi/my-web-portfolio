@@ -4,22 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WEB_DEVELOPER</title>
-    <script type="module" crossorigin src="/my-web-portfolio/assets/main-ESyVtwfq.js"></script>
+    <script type="module" crossorigin src="/my-web-portfolio/assets/index-Ih0ICW0n.js"></script>
+    <link rel="modulepreload" crossorigin href="/my-web-portfolio/assets/main-ESyVtwfq.js">
     <link rel="stylesheet" crossorigin href="/my-web-portfolio/assets/main.css">
   </head>
   <body>
+    <div class="modal_window_backdrop">
+      <div class="modal_content">Backdrop</div>
+    </div>
     <div class="layout">
       <nav class="menu__block">
         <div class="menu_container--img"></div>
         <ul class="menu_navigation--list">
           <li class="navigation--item">
-            <a href="#section-about">about me</a>
+            <a href="/">about me</a>
           </li>
           <li class="navigation--item">
             <a href="#section-skills">skills</a>
           </li>
           <li class="navigation--item">
-            <a href="#section-portfolio">portfolio</a>
+            <a href="/my-web-portfolio/pages/portfolio/portfolio.html"
+              >portfolio</a
+            >
           </li>
           <li class="navigation--item">
             <a href="#section-contacts">contacts</a>
@@ -166,7 +172,7 @@
               </div>
             </div>
           </section>
-          <section class="skill__section">
+          <section id="section-skills" class="skill__section">
             <h3 class="skill__section--title">skills</h3>
             <ul class="skill_list">
               <li class="skill_item">
@@ -272,7 +278,7 @@
               >View all</a
             >
           </section>
-          <section class="contacts__section">
+          <section id="section-contacts" class="contacts__section">
             <h2 class="contacts_title">Do you need a developer? Contact me!</h2>
             <h3 class="contacts_title--propos">
               I can help you develop a website with ease!

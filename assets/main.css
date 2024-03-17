@@ -865,11 +865,12 @@ body {
 }
 
 .portfolio_btn--link {
-  max-width: 140px;
+  max-width: 146px;
   margin: auto;
   padding: 7px 33px;
   background: #F04C0C;
   border-radius: 20px;
+  border: 3px solid #F04C0C;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -889,6 +890,9 @@ body {
   line-height: 1.19;
   text-transform: uppercase;
   cursor: pointer;
+}
+.portfolio_btn--link:hover {
+  background-color: #000000;
 }
 
 .contacts__section {
@@ -950,6 +954,28 @@ body {
   line-height: 1.21;
   text-transform: uppercase;
 }
+
+.modal_window_backdrop {
+  padding: 83px 162px 28px 28px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background: #030303;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  -moz-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+
 @media only screen and (min-width: 375px) {
   .header {
     display: -webkit-box;
@@ -982,6 +1008,7 @@ body {
             transform: rotate(19deg);
   }
 }
+
 @media only screen and (min-width: 750px) {
   .layout {
     max-width: 750px;
@@ -1034,6 +1061,18 @@ body {
     top: -28px;
     width: 94px;
     height: 65px;
+  }
+  .navigation--item {
+    cursor: pointer;
+  }
+  .navigation--item:hover {
+    color: #F04C0C;
+  }
+  .social_item--link {
+    cursor: pointer;
+  }
+  .social_item--link:hover {
+    stroke: #F04C0C;
   }
   .footer__block {
     max-width: 750px;
@@ -1256,7 +1295,7 @@ body {
     font-weight: 400;
     letter-spacing: 0;
     line-height: 1.32;
-    max-width: 220px;
+    max-width: 228px;
     padding: 10px 58px;
     border-radius: 32px;
   }
@@ -1303,11 +1342,13 @@ body {
     line-height: 1.39;
   }
 }
+
 @media only screen and (min-width: 750px) and (min-width: 1400px) {
   .header {
     padding: 80px 70px 0 70px;
   }
 }
+
 @media only screen and (min-width: 1400px) {
   .layout {
     max-width: 1440px;
@@ -1505,7 +1546,7 @@ body {
     line-height: 1.22;
   }
   .portfolio_btn--link {
-    max-width: 300px;
+    max-width: 308px;
     padding: 14px 75px;
     border-radius: 42px;
     font-family: "Inter", sans-serif;
@@ -1551,6 +1592,7 @@ body {
     line-height: 1.25;
   }
 }
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
