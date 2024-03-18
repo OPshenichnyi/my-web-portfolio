@@ -6,7 +6,7 @@
     padding: 0 28px 0 28px;
     max-width: var.$min-w;
     height: 320px;
-    margin-bottom: 36px;
+    // margin-bottom: 36px;
     @include mix.flex-center();
     @include mix.mq($bp: lg){
         max-width: var.$mid-w;
@@ -14,12 +14,12 @@
         height: auto;
         padding-left: 0;
         padding-right: 0;
-        margin-bottom: 86px
+        // margin-bottom: 86px
     };
     @include mix.mq($bp: xxl){
         max-width: var.$max-w;
         padding-top: 132px;
-        margin-bottom: 192px;
+        // margin-bottom: 192px;
 
     };
 }

@@ -27,10 +27,20 @@
         width: 300px;
         
     }
+
 }
 .layout_block--main{
      @include mix.mq($bp: lg){
         flex-grow: 1;
         max-width: 100%;
+    }
+    
+}
+
+.hover_link{
+    &:hover{
+        color: var.$color-accent;
+        stroke: var.$color-accent;
+        fill: var.$color-accent;
     }
 }
