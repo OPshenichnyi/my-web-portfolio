@@ -251,9 +251,16 @@ select {
   display: none;
 }
 
+.hover_link:hover {
+  color: #F04C0C;
+  stroke: #F04C0C;
+  fill: #F04C0C;
+}
+
 body {
   background: #030303;
   color: #FFFFFF;
+  z-index: 1;
 }
 
 .header__burger-menu-icon {
@@ -581,7 +588,6 @@ body {
   padding: 0 28px 0 28px;
   max-width: 375px;
   height: 320px;
-  margin-bottom: 36px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -725,7 +731,7 @@ body {
 }
 
 .skill__section {
-  padding: 0 28px;
+  padding: 36px 28px 0px 28px;
   margin-bottom: 36px;
 }
 
@@ -1181,7 +1187,6 @@ body {
     height: auto;
     padding-left: 0;
     padding-right: 0;
-    margin-bottom: 86px;
   }
   .about_container {
     position: relative;
@@ -1247,6 +1252,7 @@ body {
   }
   .skill__section {
     margin-bottom: 86px;
+    padding-top: 86px;
   }
   .skill__section--title {
     display: none;
@@ -1469,7 +1475,6 @@ body {
   .about__section {
     max-width: 1440px;
     padding-top: 132px;
-    margin-bottom: 192px;
   }
   .about_title--wrap {
     border-radius: 36px;
@@ -1532,6 +1537,7 @@ body {
   }
   .skill__section {
     margin-bottom: 150px;
+    padding-top: 192px;
   }
   .skill_list {
     row-gap: 68px;
