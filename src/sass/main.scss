@@ -2,18 +2,18 @@
 @use "./base/fonts";
 @use "./abstracts/variables";
 @use "./layout/layout";   
-@use "./layout/section";
 @use "./themes/theme";  
-@use "./layout/header";
+@use "./components/header";
 @use "./components/hero";
 @use "./abstracts/utils";
-@use "./layout/menu-nav";
-@use "./layout/footer";
-@use "./layout/about";
-@use "./layout/skill";
-@use "./layout/portfolio";
-@use "./layout/contacts";
-@use "./layout/modal";
+@use "./components/menu-nav";
+@use "./components/footer";
+@use "./components/about";
+@use "./components/skill";
+@use "./components/portfolio";
+@use "./components/contacts";
+@use "./components/modal";
+@use "./pages/portfolio-page";
 
 
 

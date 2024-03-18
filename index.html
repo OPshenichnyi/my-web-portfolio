@@ -6,8 +6,8 @@
     <title>WEB_DEVELOPER</title>
   </head>
   <body>
-    <div class="modal_window_backdrop">
-      <button type="button" class="backdrop__close--btn">
+    <div data-mobile class="modal_window_backdrop mobile-hidden">
+      <button data-mobile-close type="button" class="backdrop__close--btn">
         <svg width="27" height="27" class="header__burger-menu-icon">
           <use xlink:href="/icon-sprite.svg#close"></use>
         </svg>
@@ -17,9 +17,7 @@
           <a href="/my-web-portfolio/">about me</a>
         </li>
         <li class="navigation--item">
-          <a class="modal_link" href="/my-web-portfolio/#section-skills"
-            >skills</a
-          >
+          <a class="modal_link" href="/#section-skills">skills</a>
         </li>
         <li class="navigation--item">
           <a href="/my-web-portfolio/pages/portfolio/portfolio.html"
@@ -27,9 +25,7 @@
           >
         </li>
         <li class="navigation--item">
-          <a class="modal_link" href="/my-web-portfolio/#section-contacts"
-            >contacts</a
-          >
+          <a class="modal_link" href="/#section-contacts">contacts</a>
         </li>
       </ul>
       <ul class="social_link_list">
@@ -153,7 +149,7 @@
       </nav>
       <div class="layout_block--main">
         <header class="header">
-          <button type="button" class="header__burger-menu">
+          <button data-mobile-open type="button" class="header__burger-menu">
             <svg width="27" height="20" class="header__burger-menu-icon">
               <use xlink:href="/icon-sprite.svg#burger"></use>
             </svg>

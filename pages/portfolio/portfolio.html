@@ -6,8 +6,8 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <div class="modal_window_backdrop">
-      <button type="button" class="backdrop__close--btn">
+    <div data-mobile class="modal_window_backdrop mobile-hidden">
+      <button data-mobile-close type="button" class="backdrop__close--btn">
         <svg width="27" height="27" class="header__burger-menu-icon">
           <use xlink:href="/icon-sprite.svg#close"></use>
         </svg>
@@ -146,8 +146,8 @@
         <h3 class="menu_block--profession">fullstack developer</h3>
       </nav>
       <div class="layout_block--main">
-        <header class="header">
-          <button type="button" class="header__burger-menu">
+        <header class="header portfolio_header">
+          <button data-mobile-open type="button" class="header__burger-menu">
             <svg width="27" height="20" class="header__burger-menu-icon">
               <use xlink:href="/icon-sprite.svg#burger"></use>
             </svg>

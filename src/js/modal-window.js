@@ -1,19 +1,14 @@
-const refs = {
-  burgerMenu: document.querySelector('.header__burger-menu'),
-  modalWindow: document.querySelector('.modal_window_backdrop'),
-  close: document.querySelector('.backdrop__close--btn'),
-  link: document.querySelector('.modal_link'),
-};
+(() => {
+  const refs = {
+    openModalBtn: document.querySelector('[data-mobile-open]'),
+    closeModalBtn: document.querySelector('[data-mobile-close]'),
+    modal: document.querySelector('[data-mobile]'),
+  };
 
-refs.burgerMenu.addEventListener('click', () => {
-  refs.modalWindow.classList.add('show');
-});
+  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
 
-refs.close.addEventListener('click', () => {
-  refs.modalWindow.classList.remove('show');
-});
-
-refs.link.addEventListener('click', () => {
-  console.log('link');
-  refs.modalWindow.classList.remove('show');
-});
+  function toggleModal() {
+    refs.modal.classList.toggle('mobile-hidden');
+  }
+})();
