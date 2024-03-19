@@ -12,7 +12,8 @@
     "build": "vite build --base=/my-web-portfolio/",
     "preview": "vite preview",
     "lint:js": "eslint src/**/*.{js,jsx}",
-    "watch": "npx vite build --watch"
+    "watch": "npx vite build --watch",
+    "start": "node server.js"
   },
   "browserslist": [
     "cover 99.5%"
@@ -34,6 +35,7 @@
     "vite-plugin-image-optimizer": "^1.1.7"
   },
   "dependencies": {
+    "express": "^4.18.3",
     "the-new-css-reset": "^1.11.2"
   }
 }
