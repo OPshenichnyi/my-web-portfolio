@@ -13,6 +13,7 @@
         padding-right: 30px;
     }
 }
+
 .test-bg{
     background: var.$bg_black_secondary;
 }
@@ -42,12 +43,16 @@
 }
 
 .navigation--item{
+    display: flex;
     @include mix.font-styles($fs:16px, $fw: 300, $lh:39px,);
     text-transform: uppercase;
     @include mix.mq($bp: lg){
+        stroke: var.$text-primary-white;
         cursor: pointer;
         &:hover{
             color: var.$color-accent;
+            stroke: var.$color-accent;
+
         }
     }
     @include mix.mq($bp: xxl){
@@ -90,3 +95,8 @@
         @include mix.font-styles($fs: 14px, $fw: 400, $lh: 17px, $ls: 0);
     }
 }
+
+.svg-line{
+ margin-right: 14px;
+}
+
