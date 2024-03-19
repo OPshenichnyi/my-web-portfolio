@@ -3,5 +3,5 @@
     "baseUrl": "src",
     "types": ["vite/client"]
   },
-  "include": ["src"]
+  "include": ["src", "main.js"]
 }
