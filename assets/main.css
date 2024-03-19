@@ -1,4 +1,4 @@
-/***
+@charset "UTF-8";/***
     The new CSS reset - version 1.11.2 (last updated 15.11.2023)
     GitHub page: https://github.com/elad2412/the-new-css-reset
 ***/
@@ -127,6 +127,7 @@ meter {
 ::-webkit-details-marker {
     display: none;
 }
+
 body,
 h1,
 h2,
@@ -260,7 +261,6 @@ select {
 body {
   background: #030303;
   color: #FFFFFF;
-  z-index: 1;
 }
 
 .header__burger-menu-icon {
@@ -406,6 +406,7 @@ body {
   padding-top: 28px;
   padding-left: 32px;
   padding-right: 16px;
+  padding-bottom: 28px;
 }
 
 .test-bg {
@@ -1029,7 +1030,114 @@ body {
   margin-bottom: 35px;
 }
 
-@media only screen and (min-width: 375px) {
+.portfolio_card_list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  row-gap: 15px;
+}
+
+.portfolio_img_container {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio_img_container:hover .backdrop_img {
+  top: 0;
+}
+
+.backdrop_img {
+  position: absolute;
+  top: -100%; /* Початкове положення поза контейнером */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Напівпрозорий чорний колір */
+  -webkit-transition: top 0.3s ease;
+  -moz-transition: top 0.3s ease;
+  transition: top 0.3s ease; /* Плавна анімація */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+}
+
+.portfolio_img--page {
+  background: #030303;
+}
+
+.link_projects {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.22;
+  text-transform: uppercase;
+  padding: 15px;
+}
+
+.card_wrap {
+  padding: 15px;
+  width: 340px;
+  background: #181818;
+  border: 1px solid rgba(255, 255, 255, 0.5019607843);
+  border-radius: 15px;
+}
+
+.wrap_description_card {
+  padding-top: 15px;
+}
+.wrap_description_card .title_card {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.5;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.text_description_card {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.38;
+  margin-bottom: 10px;
+}
+
+.steak_technology_card {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.57;
+  text-transform: uppercase;
+  color: #F04C0C;
+}
+
+@media only screen and (min-width: 375px){
   .header {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1062,7 +1170,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 750px){
   .layout {
     max-width: 750px;
     display: -webkit-box;
@@ -1396,13 +1504,13 @@ body {
   }
 }
 
-@media only screen and (min-width: 750px) and (min-width: 1400px) {
+@media only screen and (min-width: 750px) and (min-width: 1400px){
   .header {
     padding: 80px 70px 0 70px;
   }
 }
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1400px){
   .layout {
     max-width: 1440px;
   }
@@ -1646,7 +1754,7 @@ body {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce){
   *,
   *::before,
   *::after {
