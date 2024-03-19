@@ -1031,20 +1031,8 @@ body {
 }
 
 .portfolio_card_list {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-     -moz-box-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-          align-items: center;
-  -webkit-flex-wrap: wrap;
-          flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
   -webkit-column-gap: 10px;
      -moz-column-gap: 10px;
           column-gap: 10px;
@@ -1128,6 +1116,7 @@ body {
 }
 
 .steak_technology_card {
+  margin-top: auto;
   font-family: "Inter", sans-serif;
   font-size: 14px;
   font-weight: 600;
@@ -1502,6 +1491,9 @@ body {
     letter-spacing: 0;
     line-height: 1.39;
   }
+  .portfolio_card_list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media only screen and (min-width: 750px) and (min-width: 1400px){
@@ -1751,6 +1743,9 @@ body {
     font-weight: 400;
     letter-spacing: 0;
     line-height: 1.25;
+  }
+  .portfolio_card_list {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
