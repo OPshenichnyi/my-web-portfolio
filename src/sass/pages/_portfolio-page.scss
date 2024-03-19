@@ -5,10 +5,16 @@
     margin-bottom: 35px;
 }
 .portfolio_card_list{
-    @include mix.flex-center();
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     column-gap: 10px;
     row-gap: 15px;
+    @include mix.mq($bp: lg){
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include mix.mq($bp: xxl){
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 .portfolio_img_container{
     position: relative;
@@ -49,6 +55,7 @@
 }
 
 .wrap_description_card{
+
     padding-top: 15px;
     .title_card{
     @include mix.font-styles($fs: 24px, $fw: 600, $lh: 36px);
@@ -63,6 +70,7 @@
 }
 
 .steak_technology_card{
+    margin-top: auto;
     @include mix.font-styles($fs: 14px, $fw: 600, $lh: 22px);
     text-transform: uppercase;
     color: var.$color-accent;
