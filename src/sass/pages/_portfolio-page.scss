@@ -1,3 +1,69 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+
 .portfolio_header{
     margin-bottom: 35px;
+}
+.portfolio_card_list{
+    @include mix.flex-center();
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 15px;
+}
+.portfolio_img_container{
+    position: relative;
+    overflow: hidden;
+    &:hover{
+        .backdrop_img{
+            top: 0;
+        }
+    }
+}
+.backdrop_img{
+    position: absolute;
+    top: -100%; /* Початкове положення поза контейнером */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Напівпрозорий чорний колір */
+    transition: top 0.3s ease; /* Плавна анімація */
+    @include mix.flex-center();
+}
+.portfolio_img--page{
+    background: var.$bg_primary;
+}
+
+.link_projects{
+    @include mix.font-styles($fs: 18px, $fw: 600, $lh: 22px);
+    text-transform: uppercase;
+    // color: var.$color-accent;
+    padding: 15px ;
+}
+.card_wrap{
+    padding: 15px;
+    width: 340px;
+    background: var.$bg_black_secondary;
+    border: 1px solid var.$border_color_grey;
+    border-radius: 15px;
+
+}
+
+.wrap_description_card{
+    padding-top: 15px;
+    .title_card{
+    @include mix.font-styles($fs: 24px, $fw: 600, $lh: 36px);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+}
+
+.text_description_card{
+   @include mix.font-styles($fs: 16px, $fw: 400, $lh: 22px);
+   margin-bottom: 10px;
+}
+
+.steak_technology_card{
+    @include mix.font-styles($fs: 14px, $fw: 600, $lh: 22px);
+    text-transform: uppercase;
+    color: var.$color-accent;
 }
