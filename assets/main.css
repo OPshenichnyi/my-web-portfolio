@@ -445,6 +445,10 @@ body {
 }
 
 .navigation--item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 300;
@@ -482,6 +486,10 @@ body {
   line-height: 2.13;
   text-transform: uppercase;
   color: #F04C0C;
+}
+
+.svg-line {
+  margin-right: 14px;
 }
 
 .footer__bg {
@@ -1213,10 +1221,12 @@ body {
     height: 65px;
   }
   .navigation--item {
+    stroke: #FFFFFF;
     cursor: pointer;
   }
   .navigation--item:hover {
     color: #F04C0C;
+    stroke: #F04C0C;
   }
   .social_item--link {
     cursor: pointer;
