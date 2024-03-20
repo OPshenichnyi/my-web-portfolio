@@ -8,7 +8,7 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import IconSpritePlugin from './plugins/vite-plugin-icon-sprite';
 
 export default defineConfig({
-  base: '/my-web-portfolio/',
+  // base: '/my-web-portfolio/',
   plugins: [
     IconSpritePlugin(),
     ViteImageOptimizer({
