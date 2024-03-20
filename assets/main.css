@@ -610,6 +610,7 @@ body {
   padding: 0 28px 0 28px;
   max-width: 375px;
   height: 320px;
+  margin-bottom: 86px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -758,7 +759,7 @@ body {
 }
 
 .skill__section {
-  padding: 36px 28px 0px 28px;
+  padding: 0px 28px;
   margin-bottom: 36px;
 }
 
@@ -773,12 +774,8 @@ body {
 }
 
 .skill_list {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-          flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   -webkit-box-pack: center;
   -webkit-justify-content: center;
      -moz-box-pack: center;
@@ -802,7 +799,6 @@ body {
      -moz-box-align: center;
           align-items: center;
   position: relative;
-  width: 155px;
   background: #181818;
   border: 1px solid rgba(255, 255, 255, 0.5019607843);
   border-radius: 12px;
@@ -885,7 +881,6 @@ body {
 }
 .portfolio_list--item .portfolio_item--img {
   width: 340px;
-  height: 200px;
   margin-bottom: 8px;
 }
 .portfolio_list--item .portfolio_item--title {
@@ -1008,7 +1003,6 @@ body {
   top: 0;
   left: 0;
   z-index: 1000;
-  width: 100%;
   height: 100%;
   background: #030303;
   visibility: visible;
@@ -1113,7 +1107,6 @@ body {
 
 .card_wrap {
   padding: 15px;
-  width: 340px;
   background: #181818;
   border: 1px solid rgba(255, 255, 255, 0.5019607843);
   border-radius: 15px;
@@ -1157,6 +1150,12 @@ body {
     max-width: 375px;
     padding: 24px 32px 24px 32px;
   }
+  .about__section {
+    margin-bottom: 36px;
+  }
+  .skill_list .skill_item {
+    width: 155px;
+  }
   .portfolio_svg--dev {
     position: absolute;
     right: 28px;
@@ -1165,6 +1164,12 @@ body {
        -moz-transform: rotate(19deg);
         -ms-transform: rotate(19deg);
             transform: rotate(19deg);
+  }
+  .portfolio_img--page {
+    width: 340px;
+  }
+  .card_wrap {
+    width: 320px;
   }
 }
 
@@ -1295,6 +1300,7 @@ body {
     height: auto;
     padding-left: 0;
     padding-right: 0;
+    margin-bottom: 86px;
   }
   .about_container {
     position: relative;
@@ -1366,6 +1372,7 @@ body {
     display: none;
   }
   .skill_list {
+    grid-template-columns: repeat(4, 1fr);
     row-gap: 45px;
     -webkit-column-gap: 10px;
        -moz-column-gap: 10px;
@@ -1586,6 +1593,7 @@ body {
   .about__section {
     max-width: 1440px;
     padding-top: 132px;
+    margin-bottom: 192px;
   }
   .about_title--wrap {
     border-radius: 36px;
