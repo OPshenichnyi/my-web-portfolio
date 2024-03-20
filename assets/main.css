@@ -295,6 +295,19 @@ body {
   text-transform: uppercase;
 }
 
+.header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+          justify-content: space-between;
+  justify-items: baseline;
+  padding: 31px 28px 0 28px;
+}
+
 .hero__section {
   padding-top: 24px;
   display: -webkit-box;
@@ -738,6 +751,11 @@ body {
 .about_soft_skill--wrap .soft_skill_item:not(:last-child) {
   margin-bottom: 2px;
 }
+.about_soft_skill--wrap .skill_item--svg {
+  width: 6px;
+  height: 6px;
+  margin-right: 4px;
+}
 
 .skill__section {
   padding: 36px 28px 0px 28px;
@@ -1135,26 +1153,9 @@ body {
 }
 
 @media only screen and (min-width: 375px){
-  .header {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-       -moz-box-pack: justify;
-            justify-content: space-between;
-    justify-items: baseline;
-    padding: 31px 28px 0 28px;
-  }
   .footer__block {
     max-width: 375px;
     padding: 24px 32px 24px 32px;
-  }
-  .about_soft_skill--wrap .skill_item--svg {
-    width: 6px;
-    height: 6px;
-    margin-right: 4px;
   }
   .portfolio_svg--dev {
     position: absolute;
