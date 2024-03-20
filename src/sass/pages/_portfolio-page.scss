@@ -37,17 +37,23 @@
 }
 .portfolio_img--page{
     background: var.$bg_primary;
+    @include mix.mq($bp: sm){
+        width: 340px;
+    }
+    
 }
 
 .link_projects{
     @include mix.font-styles($fs: 18px, $fw: 600, $lh: 22px);
     text-transform: uppercase;
-    // color: var.$color-accent;
     padding: 15px ;
 }
 .card_wrap{
     padding: 15px;
-    width: 340px;
+    @include mix.mq($bp: sm){
+        width: 320px;
+    }
+    
     background: var.$bg_black_secondary;
     border: 1px solid var.$border_color_grey;
     border-radius: 15px;

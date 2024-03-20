@@ -70,7 +70,6 @@
 
     .portfolio_item--img{
         width: 340px;
-        height: 200px;
         margin-bottom: 8px;
         @include mix.mq($bp: lg){
             width: 170px;

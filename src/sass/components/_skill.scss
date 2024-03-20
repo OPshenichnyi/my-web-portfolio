@@ -3,7 +3,7 @@
 
 
 .skill__section{
-    padding: 36px 28px 0px 28px;
+    padding: 0px 28px;
     margin-bottom: 36px;
     @include mix.mq($bp: lg){
         margin-bottom: 86px;
@@ -25,12 +25,13 @@
 }
 
 .skill_list{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     row-gap: 36px;
     column-gap: 9px;
     @include mix.mq($bp: lg){
+    grid-template-columns: repeat(4, 1fr);
        row-gap: 45px; 
        column-gap: 10px;
     }
@@ -40,16 +41,16 @@
     }
 
     .skill_item{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include mix.flex-center();
         position: relative;
-        width: 155px;
         background: var.$bg_black_secondary;
         border: 1px solid var.$border_color_grey;
         border-radius: 12px;
         padding-top: 35px;
         padding-bottom: 12px;
+        @include mix.mq($bp: sm){
+            width: 155px;
+        }
         @include mix.mq($bp: lg){
             width: 120px;
             padding-top: 30px;
