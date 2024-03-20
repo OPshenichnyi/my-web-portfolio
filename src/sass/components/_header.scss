@@ -26,12 +26,11 @@
 }
 
 .header{
-    @include mix.mq(){
         display: flex;
         justify-content: space-between;
         justify-items: baseline;
         padding: 31px 28px 0 28px;
-    }
+
     
     @include mix.mq($bp:lg){
         justify-content: end;

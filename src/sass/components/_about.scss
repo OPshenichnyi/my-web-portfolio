@@ -185,10 +185,10 @@
         
     }
     .skill_item--svg{
-        @include mix.mq($bp: sm){
+       
             width: 6px;
             height: 6px;
             margin-right: 4px;
-        }
+
     }
 }
