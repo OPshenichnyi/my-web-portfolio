@@ -7,11 +7,9 @@
     margin-bottom: 36px;
     @include mix.mq($bp: lg){
         margin-bottom: 86px;
-        padding-top: 86px;
     }
     @include mix.mq($bp: xxl){
         margin-bottom: 150px;
-        padding-top: 192px;
     }
 }
 

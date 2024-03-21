@@ -38,7 +38,7 @@
 .portfolio_img--page{
     background: var.$bg_primary;
     @include mix.mq($bp: sm){
-        width: 340px;
+        width: 320px;
     }
     
 }
@@ -53,7 +53,12 @@
     @include mix.mq($bp: sm){
         width: 320px;
     }
-    
+    @include mix.mq($bp: lg){
+        width: 255px;
+    }
+    @include mix.mq($bp: xxl){
+        width: 350px;
+    }
     background: var.$bg_black_secondary;
     border: 1px solid var.$border_color_grey;
     border-radius: 15px;
@@ -61,18 +66,23 @@
 }
 
 .wrap_description_card{
-
     padding-top: 15px;
     .title_card{
     @include mix.font-styles($fs: 24px, $fw: 600, $lh: 36px);
     text-transform: uppercase;
     margin-bottom: 10px;
+    @include mix.mq($bp: xxl){
+        margin-bottom: 18px;
+    }
 }
 }
 
 .text_description_card{
    @include mix.font-styles($fs: 16px, $fw: 400, $lh: 22px);
    margin-bottom: 10px;
+       @include mix.mq($bp: xxl){
+        margin-bottom: 18px;
+    }
 }
 
 .steak_technology_card{
