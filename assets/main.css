@@ -1166,7 +1166,7 @@ body {
             transform: rotate(19deg);
   }
   .portfolio_img--page {
-    width: 340px;
+    width: 320px;
   }
   .card_wrap {
     width: 320px;
@@ -1370,7 +1370,6 @@ body {
   }
   .skill__section {
     margin-bottom: 86px;
-    padding-top: 86px;
   }
   .skill__section--title {
     display: none;
@@ -1515,6 +1514,9 @@ body {
   }
   .portfolio_card_list {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .card_wrap {
+    width: 255px;
   }
 }
 
@@ -1667,7 +1669,6 @@ body {
   }
   .skill__section {
     margin-bottom: 150px;
-    padding-top: 192px;
   }
   .skill_list {
     row-gap: 68px;
@@ -1776,6 +1777,15 @@ body {
   }
   .portfolio_card_list {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .card_wrap {
+    width: 350px;
+  }
+  .wrap_description_card .title_card {
+    margin-bottom: 18px;
+  }
+  .text_description_card {
+    margin-bottom: 18px;
   }
 }
 
